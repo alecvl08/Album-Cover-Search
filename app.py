@@ -1,7 +1,9 @@
 from flask import Flask, request
+from flask_cors import CORS
 import musicbrainzngs
 
 app = Flask(__name__)
+CORS(app)
 
 musicbrainzngs.set_useragent('Album Cover Search', 'version', contact=None)
 
